@@ -39,7 +39,7 @@ WHERE fournisseur.NOM = 'Dubois & Fils';
 SELECT fournisseur.NOM, AVG(article.PRIX) AS MOYENNE
 FROM article
 JOIN fournisseur ON article.ID_FOU = fournisseur.ID
-GROUP BY fournisseur.NOM
+GROUP BY fournisseur.NOM;
 
 SELECT *
 FROM bon
@@ -77,3 +77,4 @@ FROM bon
 JOIN compo ON bon.ID = compo.ID_BON
 JOIN article ON compo.ID_ART=article.ID
 WHERE MONTH(bon.DATE_CMDE) = 4 AND YEAR(bon.DATE_CMDE) = 2019;
+
